@@ -40,10 +40,25 @@
 
   h5 {
     font-size: 0.875em;
+    color: lightgrey;
   }
 
   h6 {
     font-size: 0.75em;
+  }
+
+  h1 {
+    font-size: 3em;
+    padding-bottom: .6em;
+  }
+
+  h1 > a {
+    font-weight: 600;
+    color: black;
+  }
+  
+  h1 > a:visited {
+    color: black;
   }
 
   b,
