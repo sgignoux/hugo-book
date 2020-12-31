@@ -6,23 +6,3 @@
     };
   </script>
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-<!-- graphviz renderring -->
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/viz.js/1.7.1/viz.js"> </script>
-<script type="text/javascript">
-  (function () {
-    var vizPrefix = "language-viz-";
-    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + vizPrefix + "]"), function (x) {
-      var engine;
-      x.getAttribute("class").split(" ").forEach(function (cls) {
-        if (cls.startsWith(vizPrefix)) {
-          engine = cls.substr(vizPrefix.length);
-        }
-      });
-      var image = new DOMParser().parseFromString(Viz(x.innerText, { format: "svg", engine: engine }), "image/svg+xml");
-      x.parentNode.insertBefore(image.documentElement, x);
-      x.style.display = 'none'
-      x.parentNode.style.backgroundColor = "white"
-    });
-  })();
-</script>
